@@ -1,0 +1,154 @@
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  background-color: yellow;
+}
+
+/* サイドバー(左) */
+.side-bar {
+  background-color: #253141;
+  width: 300px;
+}
+
+/* チャット画面(右) */
+.main-chat {
+  background-color: #ffffff;
+  width: calc(100vw - 300px);
+}
+
+/* サイドバー上部 */
+.side-bar-header {
+  background-color: #253141;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.user-name {
+  font-size: 16px;
+  color: #fafafa;
+  text-decoration: none;
+}
+.chat-make-btn {
+  padding: 14px;
+  font-size: 10px;
+  color: deepskyblue;
+  border: 1px solid lightblue;
+  text-decoration: none;
+}
+
+/* サイドバー下部 */
+.rooms {
+  background-color: #2F3E51;
+  width: 100%;
+  height: calc(100vh - 100px);
+  padding: 20px;
+  overflow: auto;
+}
+.room {
+  margin-bottom: 40px;
+}
+.room-link {
+  color: white;
+  text-decoration: none;
+}
+
+/* チャット画面上部 */
+.chat-header {
+  background-color: #ffffff;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+.chat-title {
+  margin-top: 36px;
+  font-size: 24px;
+  color: #333;
+}
+.chat-quit {
+  display: flex;
+  align-items: center;
+}
+.chat-quit-btn {
+  padding: 20px;
+  border: 1px solid darkred;
+  color: darkred;
+  text-decoration: none;
+}
+
+/* チャット画面真ん中 */
+.chat-messages {
+  background-color: #fafafa;
+  height: calc(100% - 190px);
+  padding: 40px;
+  overflow-x: auto;
+}
+.message {
+  margin-bottom: 40px;
+}
+.message-header {
+  display: flex;
+  margin-bottom: 10px;
+}
+.message-poster {
+  font-size: 16px;
+  color: #434a54;
+  vertical-align: top;
+}
+.messaged-at {
+  font-size: 12px;
+  color: #999;
+  margin-left: 10px;
+}
+.message-body {
+  font-size: 14px;
+  color: #434a54;
+  word-break: break-all ;
+}
+
+/* チャット画面下部 */
+.chat-form {
+  background-color: #dddddd;
+  height: 90px;
+  padding: 20px 40px;
+}
+.chat-send-form {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+.chat-send-contents {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+}
+.chat-send-message {
+  padding: 0 10px;
+  color: #dddddd;
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+.chat-send-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+.hidden { display: none; }
+.chat-send-btn {
+  background-color: #38aef0;
+  margin-left: 15px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: white;
+  border: 0;
+}
