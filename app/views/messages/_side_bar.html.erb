@@ -1,1 +1,11 @@
-＜サイドバー＞
+<div class="side-bar-header">
+  <a href="#" class="user-name">Tom</a>
+  <a href="#" class="chat-make-btn">チャットを作成する</a>
+</div>
+<div class="rooms">
+  <ul>
+  <% 10.times do |i| %>
+    <li class="room"><a href="#" class="room-link">techroom<%= i+1 %></a></li>
+  <% end %>
+  </ul>
+</div>

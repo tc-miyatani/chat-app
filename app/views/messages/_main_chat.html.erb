@@ -1,1 +1,29 @@
-＜チャット画面＞
+<div class="chat-header">
+  <h2 class="chat-title">hogefuga</h2>
+  <p class="chat-quit"><a href="#" class="chat-quit-btn">チャットを終了する</a></p>
+</div>
+<div class="chat-messages">
+  <% 5.times do |i| %>
+  <div class="message">
+    <div class="message-header">
+      <div class="message-poster">Tom</div>
+      <div class="messaged-at">2021/06/30 22:10</div>
+    </div>
+    <div class="message-body">
+      おはよう <%= i %>
+    </div>
+  </div>
+  <% end %>
+</div>
+<div class="chat-form">
+  <%= form_with(model: nil, local: true, class: 'chat-send-form') do |form| %>
+    <div class="chat-send-contents">
+      <%= form.text_field :message, placeholder: 'type a message', class: 'chat-send-message' %>
+      <label class="chat-send-image">
+        <span class="chat-send-image-text">画像</span>
+        <%= form.file_field :file, class: 'hidden' %>
+      </label>
+    </div>
+    <%= form.submit "送信", class: 'chat-send-btn' %>
+  <% end %>
+</div>
