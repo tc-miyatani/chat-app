@@ -7,7 +7,7 @@
   <div class="message">
     <div class="message-header">
       <div class="message-poster"><%= message.user.name %></div>
-      <div class="messaged-at"><%= message.created_at %></div>
+      <div class="messaged-at"><%= l message.created_at %></div>
     </div>
     <div class="message-body"><%= message.content %></div>
   </div>
