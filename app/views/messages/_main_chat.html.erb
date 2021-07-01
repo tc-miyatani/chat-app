@@ -3,25 +3,23 @@
   <p class="chat-quit"><a href="#" class="chat-quit-btn">チャットを終了する</a></p>
 </div>
 <div class="chat-messages">
-  <% 5.times do |i| %>
+  <% @messages.each do |message| %>
   <div class="message">
     <div class="message-header">
-      <div class="message-poster">Tom</div>
-      <div class="messaged-at">2021/06/30 22:10</div>
+      <div class="message-poster"><%= message.user.name %></div>
+      <div class="messaged-at"><%= message.created_at %></div>
     </div>
-    <div class="message-body">
-      おはよう <%= i %>
-    </div>
+    <div class="message-body"><%= message.content %></div>
   </div>
   <% end %>
 </div>
 <div class="chat-form">
-  <%= form_with(model: nil, local: true, class: 'chat-send-form') do |form| %>
+  <%= form_with(model: [@room, @message], local: true, class: 'chat-send-form') do |form| %>
     <div class="chat-send-contents">
-      <%= form.text_field :message, placeholder: 'type a message', class: 'chat-send-message' %>
+      <%= form.text_field :content, placeholder: 'type a message', class: 'chat-send-message' %>
       <label class="chat-send-image">
         <span class="chat-send-image-text">画像</span>
-        <%= form.file_field :file, class: 'hidden' %>
+        <%= form.file_field :image, class: 'hidden' %>
       </label>
     </div>
     <%= form.submit "送信", class: 'chat-send-btn' %>
