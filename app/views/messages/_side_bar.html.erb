@@ -1,5 +1,5 @@
 <div class="side-bar-header">
-  <a href="#" class="user-name">Tom</a>
+  <%= link_to current_user.name, edit_user_path(current_user), method: :get, class: 'user-name' %>
   <a href="#" class="chat-make-btn">チャットを作成する</a>
 </div>
 <div class="rooms">
