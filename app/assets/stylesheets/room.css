@@ -89,3 +89,8 @@ select {
   height: 80px;
   width: 100%;
 }
+
+/* チャットメッセージ送信のバリデーションエラー時に入力フォームの画像ボタンが崩れないようにする為 */
+.field_with_errors {
+  display: contents;
+}
