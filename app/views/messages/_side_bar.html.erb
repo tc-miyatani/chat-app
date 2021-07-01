@@ -1,11 +1,13 @@
 <div class="side-bar-header">
   <%= link_to current_user.name, edit_user_path(current_user), method: :get, class: 'user-name' %>
-  <a href="#" class="chat-make-btn">チャットを作成する</a>
+  <%= link_to 'チャットを作成する', new_room_path, class: 'chat-make-btn' %>
 </div>
 <div class="rooms">
   <ul>
-  <% 10.times do |i| %>
-    <li class="room"><a href="#" class="room-link">techroom<%= i+1 %></a></li>
-  <% end %>
+    <% current_user.rooms.each do |room| %>
+      <li class="room">
+        <a href="#" class="room-link"><%= room.name %></a>
+      </li>
+    <% end %>
   </ul>
 </div>
