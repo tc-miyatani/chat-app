@@ -4,17 +4,7 @@
     <%= link_to 'チャットを終了する', room_path(@room), method: :delete, class: 'chat-quit-btn' %>
   </p>
 </div>
-<div class="chat-messages">
-  <% @messages.each do |message| %>
-  <div class="message">
-    <div class="message-header">
-      <div class="message-poster"><%= message.user.name %></div>
-      <div class="messaged-at"><%= l message.created_at %></div>
-    </div>
-    <div class="message-body"><%= message.content %></div>
-  </div>
-  <% end %>
-</div>
+<%= render 'message' %>
 <div class="chat-form">
   <%= form_with(model: [@room, @message], local: true, class: 'chat-send-form') do |form| %>
     <div class="chat-send-contents">
